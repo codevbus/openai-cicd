@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenAI Query</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/styles.css') }}"> <!-- Add the reference to the CSS file -->
+</head>
+<body>
+    <h1>OpenAI Query</h1>
+    <form action="/" method="post" id="aiquery">
+        <label for="user_input">Your Query:</label>
+        <textarea id="user_input" name="user_input" rows="7" cols="50" form="aiquery" required></textarea>
+        <br>
+        <label for="model">Choose a Model:</label>
+        <select name="model" id="model">
+            <option value="gpt-3.5-turbo">GPT-3.5 Turbo</option>
+            <!--<option value="gpt-4">GPT-4</option> -->
+            <!--<option value="gpt-2">GPT-2</option> -->
+            <!--<option value="davinci">Davinci</option> -->
+            <!--<option value="davinci-codex">Davinci Codex</option> -->
+            <!--<option value="curie">Curie</option> -->
+            <!--<option value="babbage">Babbage</option> -->
+            <!--<option value="ada">Ada</option> -->
+            <!-- Add more options as needed -->
+        </select>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+    {% if response_data %}
+    <h2>Output:</h2>
+    <pre>{{ response_data }}</pre>
+    {% endif %}

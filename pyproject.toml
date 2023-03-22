@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "openai-cicd"
+version = "0.1.0"
+description = "Basic OpenAI Flask interface for demoing usage as well as unit testing of the API"
+authors = ["Mike Vanbuskirk <mike@mikevanbuskirk.io>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+requests = "^2.28.2"
+Flask = "^2.2.3"
+
+[tool.poetry.dev-dependencies]
+unittest = "^0.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
